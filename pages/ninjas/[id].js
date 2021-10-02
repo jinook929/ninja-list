@@ -36,9 +36,9 @@ const Details = ({ ninja }) => {
         <p><span>Website :</span> {ninja.website}</p>
         <p><span>City :</span> {ninja.address.city}</p>
       </NinjaDetails>
-      <BtnWrapper>
-        <Link href="/ninjas"><a>See all ninjas</a></Link>
-      </BtnWrapper>
+      
+        <Link href="/ninjas"><BtnWrapper>See all ninjas</BtnWrapper></Link>
+      
     </>
   )
 }
@@ -51,15 +51,18 @@ const NinjaDetails = styled.div`
   }
 `
 
-const BtnWrapper = styled.button`
+const BtnWrapper = styled.a.attrs({
+  className: "btnA",
+})`
   display: block;
   width: 150px;
   padding: 8px 0;
   margin: 20px auto;
   background: #4979ff;
-  outline: none;
-  border: none;
-  border-radius: 4px;
   color: white;
   text-align: center;
+  &:hover {
+    cursor: pointer;
+    background-color: #7979ff;
+  }
 `

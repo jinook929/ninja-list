@@ -14,16 +14,16 @@ const About = () => {
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque animi voluptas expedita officia dolorum, quasi rerum facere corrupti repudiandae vitae dolorem veritatis soluta ut praesentium reprehenderit sequi deserunt odio quod.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque animi voluptas expedita officia dolorum, quasi rerum facere corrupti repudiandae vitae dolorem veritatis soluta ut praesentium reprehenderit sequi deserunt odio quod.</p>
             </div>
-            <BtnWrapper>
-                <Link href="/ninjas"><a>See all ninjas</a></Link>
-            </BtnWrapper>
+            
+                <Link href="/ninjas"><BtnWrapper>See all ninjas</BtnWrapper></Link>
+            
         </>
     )
 }
 
 export default About
 
-const BtnWrapper = styled.button`
+const BtnWrapper = styled.a`
   display: block;
   width: 150px;
   padding: 8px 0;
@@ -34,4 +34,8 @@ const BtnWrapper = styled.button`
   border-radius: 4px;
   color: white;
   text-align: center;
+  &:hover {
+    cursor: pointer;
+    background-color: #7979ff;
+  }
 `
