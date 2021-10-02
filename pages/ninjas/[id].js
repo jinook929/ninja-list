@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import styled from "styled-components"
 
@@ -30,6 +31,9 @@ const Details = ({ ninja }) => {
   console.log("props.ninja", ninja)
   return (
     <>
+      <Head>
+        <title>NINJA | {ninja.username}</title>
+      </Head>
       <NinjaDetails>
         <h1>{ninja.name}</h1>
         <p><span>Email :</span> {ninja.email}</p>

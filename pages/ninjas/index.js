@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../styles/ninjas.module.scss'
 
@@ -21,6 +22,9 @@ const Ninjas = ({ ninjas }) => {
 
   return (
     <div>
+      <Head>
+        <title>NINJA | List</title>
+      </Head>
       <h1>All Ninjas</h1>
       {ninjas.map(ninja => (
         <Link key={ninja.id} href={`/ninjas/${ninja.id}`}>
